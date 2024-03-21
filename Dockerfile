@@ -1,7 +1,7 @@
 FROM maven:3.9.6-amazoncorretto-8-al2023 AS build
 COPY src /home/app/src
 COPY pom.xml /home/app
-RUN mvn  clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 # Package stage
 FROM arm64v8/eclipse-temurin:17
